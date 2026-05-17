@@ -56,7 +56,7 @@ Execution completed successfully and produced application logs that can later be
 
 CloudWatch automatically created a log group for the Lambda function.
 
-![CloudWatch Log Group](3-CloudWatch-Log Group.png)
+![CloudWatch Log Group](3-CloudWatch-Log-Group.png)
 
 A log group acts as a container that stores logs generated from Lambda executions.
 
