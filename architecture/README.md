@@ -10,9 +10,6 @@ The architecture combines AWS services to provide **real-time visibility**, **er
 
 ![AWS Full Observability Architecture](./AWS-Full-Observability-Architecture.png)
 
-> Rename your image file exactly as:  
-> `AWS-Full-Observability-Architecture.png`  
-> and place it inside this `architecture/` folder alongside this README.
 
 ---
 
