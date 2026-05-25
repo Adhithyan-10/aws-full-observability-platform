@@ -4,8 +4,6 @@ A production-style AWS observability solution that provides **centralized monito
 
 Built using AWS services to simulate a real-world observability architecture used by Cloud/DevOps engineers.
 
-![Architecture](./architecture/AWS-Full-Observability-Architecture.png)
-
 ---
 
 ## Region
@@ -45,6 +43,12 @@ This project addresses these challenges by implementing an end-to-end AWS observ
 
 ---
 
+# Architecture Diagram
+
+<img src="./architecture/AWS-Full-Observability-Architecture.png" width="100%">
+
+---
+
 # Solution Architecture
 
 This architecture combines:
@@ -70,12 +74,6 @@ This architecture combines:
 
 ### Dashboard Layer
 - Full centralized dashboard
-
----
-
-# Architecture Diagram
-
-<img src="./architecture/AWS-Full-Observability-Architecture.png" width="100%">
 
 ---
 
@@ -125,7 +123,7 @@ Unified dashboard showing:
 - Lambda Metrics
 - API Metrics
 - Error Metrics
-- Single Value Widgets
+- Single Value Widget
 - Live visibility
 
 ---
@@ -151,37 +149,27 @@ Unified dashboard showing:
 ```text
 Users
    ↓
-
 API Gateway
    ↓
-
 Lambda Functions
    ↓
-
 CloudWatch Metrics
    ↓
-
 Metric Filters
    ↓
-
 CloudWatch Alarms
    ↓
-
 SNS Topic
    ↓
-
 Email Notifications
 
 
 Logs
    ↓
-
 CloudWatch Logs
    ↓
-
 S3 Export
    ↓
-
 Athena Queries
 ```
 
@@ -198,8 +186,6 @@ Athena Queries
 
 # Dashboard Widgets
 
-The centralized dashboard includes:
-
 📊 EC2 CPU Widget
 
 📊 Lambda Error Widget
@@ -214,30 +200,22 @@ The centralized dashboard includes:
 
 # End-to-End Validation
 
-Testing performed:
-
 ### EC2
-
 - CPU spike generation
-- CPU alarm validation
+- Alarm validation
 
 ### Lambda
-
 - Exception generation
-- Error metric validation
+- Error validation
 
 ### API Gateway
-
 - Triggered API failures
-- Verified 4XX/5XX alarms
+- Verified 4XX / 5XX alarms
 
 ### Logging
-
 - Exported logs to S3
 
 ### Athena
-
-Executed:
 
 ```sql
 SELECT *
@@ -259,39 +237,51 @@ WHERE log_message LIKE '%Exception%';
 
 ---
 
-# Project Screenshots
+# Implementation Screenshots
 
-📷 Want to see complete implementation screenshots?
+## Monitoring Implementation
 
-👉 **[Click Here](./screenshots)**
+👉 **[Click Here](./monitoring)**
 
 Contains:
 
-- Monitoring setup
-- SNS creation
-- Alarm configuration
-- Dashboard creation
-- CloudWatch metrics
-- S3 export
+- SNS setup
+- Alarm creation
+- CloudWatch Dashboard
+- Metric filters
+- Alert validation
+- Monitoring screenshots
+
+---
+
+## Centralized Logging Implementation
+
+👉 **[Click Here](./centralized-logging)**
+
+Contains:
+
+- CloudWatch Logs
+- S3 export setup
 - Athena setup
-- Validation screenshots
+- SQL queries
+- Logging validation screenshots
 
 ---
 
 # Documentation
 
-📘 Complete project documentation:
+📘 Complete 15-page project documentation:
 
-👉 **[Click Here to View Full Documentation](./documentation/AWS-Observability-Platform.pdf)**
+👉 **[Click Here to View Documentation](./documentation/AWS-Observability-Platform.pdf)**
 
 Includes:
 
 - Architecture explanation
-- Setup process
+- Complete setup
 - Monitoring implementation
 - Logging implementation
 - Analytics workflow
-- Validation steps
+- Validation
 - Results
 
 ---
@@ -300,26 +290,13 @@ Includes:
 
 ```text
 AWS-Full-Observability-Platform/
-│
+
 ├── architecture/
-│   ├── AWS-Full-Observability-Architecture.png
-│   └── README.md
-│
 ├── monitoring/
-│   └── screenshots
-│
 ├── centralized-logging/
-│   └── screenshots
-│
 ├── setup-guide/
-│   └── README.md
-│
 ├── documentation/
-│   ├── README.md
-│   └── AWS-Observability-Platform.pdf
-│
 ├── screenshots/
-│
 └── README.md
 ```
 
@@ -346,8 +323,8 @@ AWS-Full-Observability-Platform/
 - OpenSearch integration
 - Grafana dashboards
 - Slack alerting
+- AWS X-Ray tracing
 - Cross-account observability
-- X-Ray tracing
 - Multi-region monitoring
 
 ---
